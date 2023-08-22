@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.12.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.1"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "title": {"anchor": "middle"}
+  },
+  "data": {"name": "data-f3477699c6de7bed72932471e52a0cfd"},
+  "mark": {"type": "bar"},
+  "encoding": {
+    "color": {
+      "condition": {"param": "Dollar ", "field": "Type", "type": "nominal"},
+      "value": "lightgray"
+    },
+    "column": {
+      "field": "Year",
+      "header": {
+        "labelAngle": -65,
+        "labelOrient": "bottom",
+        "labelPadding": 40,
+        "title": null
+      },
+      "spacing": 0,
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Year", "type": "nominal"},
+      {"field": "Type", "type": "nominal"},
+      {"field": "Dollar Type", "type": "nominal"},
+      {"field": "Dollars", "type": "quantitative"}
+    ],
+    "x": {
+      "axis": {"labels": false, "title": null},
+      "field": "Type",
+      "type": "nominal"
+    },
+    "y": {
+      "axis": {"title": "Dollars"},
+      "field": "Dollars",
+      "type": "quantitative"
+    }
+  },
+  "params": [
+    {
+      "name": "Dollar ",
+      "select": {"type": "point", "fields": ["Dollar Type"]},
+      "bind": {
+        "input": "select",
+        "options": ["Current Dollars", "Constant Dollars"]
+      }
+    }
+  ],
+  "title": {
+    "text": "Ungraduate Tuition and Fees",
+    "subtitle": "The comparison of Public and Private tuition and fees (1963-2022)",
+    "color": "black",
+    "subtitleColor": "gray",
+    "align": "center"
+  },
+  "transform": [{"filter": {"param": "Dollar "}}],
+  "width": 19,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+  "datasets": {
+    "data-f3477699c6de7bed72932471e52a0cfd": [
+      {
+        "Year": "1963-64",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2140
+      },
+      {
+        "Year": "1968-69",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2333
+      },
+      {
+        "Year": "1969-70",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2411
+      },
+      {
+        "Year": "1970-71",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2492
+      },
+      {
+        "Year": "1971-72",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2577
+      },
+      {
+        "Year": "1972-73",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2681
+      },
+      {
+        "Year": "1973-74",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2649
+      },
+      {
+        "Year": "1974-75",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2352
+      },
+      {
+        "Year": "1975-76",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2202
+      },
+      {
+        "Year": "1976-77",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2300
+      },
+      {
+        "Year": "1977-78",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2304
+      },
+      {
+        "Year": "1978-79",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2235
+      },
+      {
+        "Year": "1979-80",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2119
+      },
+      {
+        "Year": "1980-81",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2067
+      },
+      {
+        "Year": "1981-82",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2139
+      },
+      {
+        "Year": "1982-83",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2294
+      },
+      {
+        "Year": "1983-84",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2470
+      },
+      {
+        "Year": "1984-85",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2589
+      },
+      {
+        "Year": "1985-86",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2708
+      },
+      {
+        "Year": "1986-87",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2805
+      },
+      {
+        "Year": "1987-88",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2966
+      },
+      {
+        "Year": "1988-89",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 2990
+      },
+      {
+        "Year": "1989-90",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 3012
+      },
+      {
+        "Year": "1990-91",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 3062
+      },
+      {
+        "Year": "1991-92",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 3322
+      },
+      {
+        "Year": "1992-93",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 3525
+      },
+      {
+        "Year": "1993-94",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 3746
+      },
+      {
+        "Year": "1994-95",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 3857
+      },
+      {
+        "Year": "1995-96",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 3977
+      },
+      {
+        "Year": "1996-97",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 4031
+      },
+      {
+        "Year": "1997-98",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 4116
+      },
+      {
+        "Year": "1998-99",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 4165
+      },
+      {
+        "Year": "1999-00",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 4171
+      },
+      {
+        "Year": "2000-01",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 4127
+      },
+      {
+        "Year": "2001-02",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 4274
+      },
+      {
+        "Year": "2002-03",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 4495
+      },
+      {
+        "Year": "2003-04",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 5030
+      },
+      {
+        "Year": "2004-05",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 5339
+      },
+      {
+        "Year": "2005-06",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 5490
+      },
+      {
+        "Year": "2006-07",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 5667
+      },
+      {
+        "Year": "2007-08",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 5712
+      },
+      {
+        "Year": "2008-09",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 5928
+      },
+      {
+        "Year": "2009-10",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 6198
+      },
+      {
+        "Year": "2010-11",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 6474
+      },
+      {
+        "Year": "2011-12",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 6895
+      },
+      {
+        "Year": "2012-13",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 7191
+      },
+      {
+        "Year": "2013-14",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 7346
+      },
+      {
+        "Year": "2014-15",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 7591
+      },
+      {
+        "Year": "2015-16",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 7826
+      },
+      {
+        "Year": "2016-17",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 7924
+      },
+      {
+        "Year": "2017-18",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 8015
+      },
+      {
+        "Year": "2018-19",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 8071
+      },
+      {
+        "Year": "2019-20",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 8125
+      },
+      {
+        "Year": "2020-21",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 8183
+      },
+      {
+        "Year": "2021-22",
+        "Type": "Public",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 7869
+      },
+      {
+        "Year": "1963-64",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 9254
+      },
+      {
+        "Year": "1968-69",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 10936
+      },
+      {
+        "Year": "1969-70",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 11445
+      },
+      {
+        "Year": "1970-71",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 11955
+      },
+      {
+        "Year": "1971-72",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 12474
+      },
+      {
+        "Year": "1972-73",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 12504
+      },
+      {
+        "Year": "1973-74",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 12031
+      },
+      {
+        "Year": "1974-75",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 11528
+      },
+      {
+        "Year": "1975-76",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 11554
+      },
+      {
+        "Year": "1976-77",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 11853
+      },
+      {
+        "Year": "1977-78",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 11814
+      },
+      {
+        "Year": "1978-79",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 11806
+      },
+      {
+        "Year": "1979-80",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 11371
+      },
+      {
+        "Year": "1980-81",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 11388
+      },
+      {
+        "Year": "1981-82",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 11845
+      },
+      {
+        "Year": "1982-83",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 12755
+      },
+      {
+        "Year": "1983-84",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 13440
+      },
+      {
+        "Year": "1984-85",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 14171
+      },
+      {
+        "Year": "1985-86",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 15003
+      },
+      {
+        "Year": "1986-87",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 16013
+      },
+      {
+        "Year": "1987-88",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 17014
+      },
+      {
+        "Year": "1988-89",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 17363
+      },
+      {
+        "Year": "1989-90",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 18096
+      },
+      {
+        "Year": "1990-91",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 18474
+      },
+      {
+        "Year": "1991-92",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 19221
+      },
+      {
+        "Year": "1992-93",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 19672
+      },
+      {
+        "Year": "1993-94",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 20391
+      },
+      {
+        "Year": "1994-95",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 20834
+      },
+      {
+        "Year": "1995-96",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 21657
+      },
+      {
+        "Year": "1996-97",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 22181
+      },
+      {
+        "Year": "1997-98",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 22320
+      },
+      {
+        "Year": "1998-99",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 23016
+      },
+      {
+        "Year": "1999-00",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 23490
+      },
+      {
+        "Year": "2000-01",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 24161
+      },
+      {
+        "Year": "2001-02",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 24915
+      },
+      {
+        "Year": "2002-03",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 25371
+      },
+      {
+        "Year": "2003-04",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 26241
+      },
+      {
+        "Year": "2004-05",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 26709
+      },
+      {
+        "Year": "2005-06",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 26733
+      },
+      {
+        "Year": "2006-07",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 27695
+      },
+      {
+        "Year": "2007-08",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 27939
+      },
+      {
+        "Year": "2008-09",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 28346
+      },
+      {
+        "Year": "2009-10",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 28320
+      },
+      {
+        "Year": "2010-11",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 28117
+      },
+      {
+        "Year": "2011-12",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 28319
+      },
+      {
+        "Year": "2012-13",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 29188
+      },
+      {
+        "Year": "2013-14",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 30139
+      },
+      {
+        "Year": "2014-15",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 31198
+      },
+      {
+        "Year": "2015-16",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 32474
+      },
+      {
+        "Year": "2016-17",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 33641
+      },
+      {
+        "Year": "2017-18",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 34410
+      },
+      {
+        "Year": "2018-19",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 35107
+      },
+      {
+        "Year": "2019-20",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 35535
+      },
+      {
+        "Year": "2020-21",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 34672
+      },
+      {
+        "Year": "2021-22",
+        "Type": "Private",
+        "Dollar Type": "Constant Dollars",
+        "Dollars": 33691
+      },
+      {
+        "Year": "1963-64",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 234
+      },
+      {
+        "Year": "1968-69",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 295
+      },
+      {
+        "Year": "1969-70",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 323
+      },
+      {
+        "Year": "1970-71",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 351
+      },
+      {
+        "Year": "1971-72",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 376
+      },
+      {
+        "Year": "1972-73",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 407
+      },
+      {
+        "Year": "1973-74",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 438
+      },
+      {
+        "Year": "1974-75",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 432
+      },
+      {
+        "Year": "1975-76",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 433
+      },
+      {
+        "Year": "1976-77",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 479
+      },
+      {
+        "Year": "1977-78",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 512
+      },
+      {
+        "Year": "1978-79",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 543
+      },
+      {
+        "Year": "1979-80",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 583
+      },
+      {
+        "Year": "1980-81",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 635
+      },
+      {
+        "Year": "1981-82",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 714
+      },
+      {
+        "Year": "1982-83",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 798
+      },
+      {
+        "Year": "1983-84",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 891
+      },
+      {
+        "Year": "1984-85",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 971
+      },
+      {
+        "Year": "1985-86",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1045
+      },
+      {
+        "Year": "1986-87",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1106
+      },
+      {
+        "Year": "1987-88",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1218
+      },
+      {
+        "Year": "1988-89",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1285
+      },
+      {
+        "Year": "1989-90",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1356
+      },
+      {
+        "Year": "1990-91",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1454
+      },
+      {
+        "Year": "1991-92",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1628
+      },
+      {
+        "Year": "1992-93",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1782
+      },
+      {
+        "Year": "1993-94",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1942
+      },
+      {
+        "Year": "1994-95",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2057
+      },
+      {
+        "Year": "1995-96",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2179
+      },
+      {
+        "Year": "1996-97",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2271
+      },
+      {
+        "Year": "1997-98",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2360
+      },
+      {
+        "Year": "1998-99",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2430
+      },
+      {
+        "Year": "1999-00",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2504
+      },
+      {
+        "Year": "2000-01",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2562
+      },
+      {
+        "Year": "2001-02",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2700
+      },
+      {
+        "Year": "2002-03",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2903
+      },
+      {
+        "Year": "2003-04",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 3319
+      },
+      {
+        "Year": "2004-05",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 3629
+      },
+      {
+        "Year": "2005-06",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 3874
+      },
+      {
+        "Year": "2006-07",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 4102
+      },
+      {
+        "Year": "2007-08",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 4288
+      },
+      {
+        "Year": "2008-09",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 4512
+      },
+      {
+        "Year": "2009-10",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 4763
+      },
+      {
+        "Year": "2010-11",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 5075
+      },
+      {
+        "Year": "2011-12",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 5563
+      },
+      {
+        "Year": "2012-13",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 5899
+      },
+      {
+        "Year": "2013-14",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 6120
+      },
+      {
+        "Year": "2014-15",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 6370
+      },
+      {
+        "Year": "2015-16",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 6612
+      },
+      {
+        "Year": "2016-17",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 6818
+      },
+      {
+        "Year": "2017-18",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 7051
+      },
+      {
+        "Year": "2018-19",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 7248
+      },
+      {
+        "Year": "2019-20",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 7410
+      },
+      {
+        "Year": "2020-21",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 7635
+      },
+      {
+        "Year": "2021-22",
+        "Type": "Public",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 7869
+      },
+      {
+        "Year": "1963-64",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1012
+      },
+      {
+        "Year": "1968-69",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1383
+      },
+      {
+        "Year": "1969-70",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1533
+      },
+      {
+        "Year": "1970-71",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1684
+      },
+      {
+        "Year": "1971-72",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1820
+      },
+      {
+        "Year": "1972-73",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1898
+      },
+      {
+        "Year": "1973-74",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 1989
+      },
+      {
+        "Year": "1974-75",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2117
+      },
+      {
+        "Year": "1975-76",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2272
+      },
+      {
+        "Year": "1976-77",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2467
+      },
+      {
+        "Year": "1977-78",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2624
+      },
+      {
+        "Year": "1978-79",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 2867
+      },
+      {
+        "Year": "1979-80",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 3130
+      },
+      {
+        "Year": "1980-81",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 3498
+      },
+      {
+        "Year": "1981-82",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 3953
+      },
+      {
+        "Year": "1982-83",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 4439
+      },
+      {
+        "Year": "1983-84",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 4851
+      },
+      {
+        "Year": "1984-85",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 5315
+      },
+      {
+        "Year": "1985-86",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 5789
+      },
+      {
+        "Year": "1986-87",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 6316
+      },
+      {
+        "Year": "1987-88",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 6988
+      },
+      {
+        "Year": "1988-89",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 7461
+      },
+      {
+        "Year": "1989-90",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 8147
+      },
+      {
+        "Year": "1990-91",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 8772
+      },
+      {
+        "Year": "1991-92",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 9419
+      },
+      {
+        "Year": "1992-93",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 9942
+      },
+      {
+        "Year": "1993-94",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 10572
+      },
+      {
+        "Year": "1994-95",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 11111
+      },
+      {
+        "Year": "1995-96",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 11864
+      },
+      {
+        "Year": "1996-97",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 12498
+      },
+      {
+        "Year": "1997-98",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 12801
+      },
+      {
+        "Year": "1998-99",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 13428
+      },
+      {
+        "Year": "1999-00",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 14100
+      },
+      {
+        "Year": "2000-01",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 15000
+      },
+      {
+        "Year": "2001-02",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 15742
+      },
+      {
+        "Year": "2002-03",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 16383
+      },
+      {
+        "Year": "2003-04",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 17315
+      },
+      {
+        "Year": "2004-05",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 18154
+      },
+      {
+        "Year": "2005-06",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 18862
+      },
+      {
+        "Year": "2006-07",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 20047
+      },
+      {
+        "Year": "2007-08",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 20972
+      },
+      {
+        "Year": "2008-09",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 21575
+      },
+      {
+        "Year": "2009-10",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 21764
+      },
+      {
+        "Year": "2010-11",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 22042
+      },
+      {
+        "Year": "2011-12",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 22850
+      },
+      {
+        "Year": "2012-13",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 23943
+      },
+      {
+        "Year": "2013-14",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 25110
+      },
+      {
+        "Year": "2014-15",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 26182
+      },
+      {
+        "Year": "2015-16",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 27436
+      },
+      {
+        "Year": "2016-17",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 28945
+      },
+      {
+        "Year": "2017-18",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 30274
+      },
+      {
+        "Year": "2018-19",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 31527
+      },
+      {
+        "Year": "2019-20",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 32411
+      },
+      {
+        "Year": "2020-21",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 32351
+      },
+      {
+        "Year": "2021-22",
+        "Type": "Private",
+        "Dollar Type": "Current Dollars",
+        "Dollars": 33691
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
